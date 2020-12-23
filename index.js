@@ -75,8 +75,7 @@ function hide_show() {
 //결과 화면 띄우기
 function showResult(option) {
   console.log(result);
-  if (isNaN(result)) {
-  } else {
+  if (isNaN(result) !== true) {
     popup1Container.classList.add(HIDE);
     popup1Container.classList.remove(_1SHOW);
     popup2Container.classList.add(_2SHOW);
