@@ -94,9 +94,9 @@ function showResult(option, money, i, nper) {
       style: "decimal",
     }).format(money);
 
-    initialInfo.innerHTML = `금액: ${fimoney}원, 이자율: ${
-      i * 100
-    }%, 복리 횟수: ${nper}번`;
+    initialInfo.innerHTML = `금액: ${fimoney}원, 이자율: ${(i * 100).toFixed(
+      3
+    )}%, 복리 횟수: ${nper}번`;
     finalInfo.innerHTML = `${type[option - 1]} ${fifinal}원 입니다.`;
     back1.addEventListener("click", event => {
       popup2Container.classList.add(HIDE);
