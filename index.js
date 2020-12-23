@@ -76,8 +76,6 @@ function hide_show() {
 function showResult(option) {
   console.log(result);
   if (isNaN(result)) {
-    alert("유효하지 않은 값 입니다.");
-    backOrNext(option);
   } else {
     popup1Container.classList.add(HIDE);
     popup1Container.classList.remove(_1SHOW);

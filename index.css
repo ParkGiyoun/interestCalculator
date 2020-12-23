@@ -116,11 +116,13 @@
 }
 
 .mainPopup .back {
-  width: auto;
+  width: 45px;
+  height: 45px;
   border: none;
   margin-left: 20px;
-  background: none;
+  background: #badc58;
   font-size: 30px;
+  top: 25px;
 }
 
 .mainPopup .A2 {
@@ -191,7 +193,7 @@
 .mainPopup .twoShow .A1 button {
   width: auto;
   border: none;
-  margin-left: 20px;
+  padding-left: 20px;
   background: none;
   font-size: 30px;
 }
@@ -207,4 +209,15 @@
   background-color: white;
   padding: 20px 70px;
   font-size: 35px;
+}
+
+@media screen and (max-height: 675px) {
+  .mainPopup {
+    height: 675px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mainPopup {
+    width: 600px;
+  }
 }
