@@ -25,7 +25,12 @@ const finalInfo = document.querySelector(".finalInfo");
 const back1 = document.querySelector(".back1");
 
 //결과 종류 변수
-const type = ["미래 가치", "미래 가치", "단위 기간 가치", "현재 가치"];
+const type = [
+  "미래 가치는",
+  "미래 가치는",
+  "매년 입금해야 할 돈은",
+  "지금 입금해야 할 돈은",
+];
 
 //CLASS VARIABLE
 const HIDE = "hide";
@@ -68,7 +73,7 @@ function hide_show() {
   mainPopup.classList.remove(HIDE);
   popup1Container.classList.add(_1SHOW);
 
-  Data2Info.innerHTML = "이자율을 입력하세요 (단위 복리 이자율)";
+  Data2Info.innerHTML = "이자율을 입력하세요 (연 복리 이자율)";
   Data3Info.innerHTML = "복리 횟수를 입력하세요";
 }
 
@@ -86,7 +91,7 @@ function showResult(option) {
     }).format(result);
     console.log(fifinal);
 
-    finalInfo.innerHTML = `${type[option - 1]}는 ${fifinal}원 입니다.`;
+    finalInfo.innerHTML = `${type[option - 1]} ${fifinal}원 입니다.`;
     back1.addEventListener("click", event => {
       popup2Container.classList.add(HIDE);
       popup2Container.classList.remove(_2SHOW);
@@ -140,7 +145,7 @@ function optionClick() {
   //a/f버튼
   A_F.addEventListener("click", event => {
     hide_show();
-    Data1Info.innerHTML = "주기적으로 입금할 금액을 입력하세요";
+    Data1Info.innerHTML = "매년 입금할 금액을 입력하세요";
     const option = 1;
     backOrNext(option);
   });
