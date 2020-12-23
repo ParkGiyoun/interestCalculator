@@ -115,14 +115,15 @@
   border: none;
 }
 
-.mainPopup .back {
+.back {
   width: 45px;
   height: 45px;
   border: none;
+  margin-top: 30px;
   margin-left: 20px;
   background: #badc58;
   font-size: 30px;
-  top: 25px;
+  top: -25px;
 }
 
 .mainPopup .A2 {
@@ -155,7 +156,8 @@
 .B3 {
   height: 100%;
   width: 100%;
-  padding: 50px 55px;
+  padding-left: 55px;
+  padding-right: 55px;
 }
 .mainPopup .oneShow .dataList li h3 {
   margin-bottom: 10px;
