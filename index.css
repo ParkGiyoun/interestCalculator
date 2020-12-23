@@ -3,6 +3,23 @@
   padding: 0;
   clear: both;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 .hide {
   display: none;
 }
@@ -16,12 +33,12 @@
   justify-content: center;
 }
 .welcomeContainer {
+  animation: fadeIn ease 1.5s;
   display: flex;
   align-items: center;
   flex-direction: column;
   height: auto;
 }
-
 .welcomeContainer h1 {
   font-size: 50px;
 }
@@ -31,6 +48,7 @@
 }
 
 .optionContainer {
+  animation: fadeIn ease 1.5s;
   display: flex;
   align-items: center;
   width: 100%;
@@ -77,6 +95,7 @@
 }
 
 .mainPopup .oneShow {
+  animation: fadeIn ease 0.5s;
   margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
@@ -152,6 +171,7 @@
 }
 
 .mainPopup .twoShow {
+  animation: fadeIn ease 0.5s;
   margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
