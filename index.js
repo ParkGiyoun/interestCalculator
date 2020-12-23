@@ -22,6 +22,7 @@ const back = document.querySelector(".back");
 const next = document.querySelector(".next");
 
 const finalInfo = document.querySelector(".finalInfo");
+const initialInfo = document.querySelector(".initialValue");
 const back1 = document.querySelector(".back1");
 
 //결과 종류 변수
@@ -78,7 +79,7 @@ function hide_show() {
 }
 
 //결과 화면 띄우기
-function showResult(option) {
+function showResult(option, money, i, nper) {
   console.log(result);
   if (isNaN(result) !== true) {
     popup1Container.classList.add(HIDE);
@@ -89,8 +90,13 @@ function showResult(option) {
     fifinal = new Intl.NumberFormat("en-CA", {
       style: "decimal",
     }).format(result);
-    console.log(fifinal);
+    fimoney = new Intl.NumberFormat("en-CA", {
+      style: "decimal",
+    }).format(money);
 
+    initialInfo.innerHTML = `금액: ${fimoney}원, 이자율: ${
+      i * 100
+    }%, 복리 횟수: ${nper}번`;
     finalInfo.innerHTML = `${type[option - 1]} ${fifinal}원 입니다.`;
     back1.addEventListener("click", event => {
       popup2Container.classList.add(HIDE);
@@ -108,28 +114,28 @@ function computerize(option) {
     const nper = parseInt(Data3.value);
 
     A_to_F(pmt, i, nper);
-    showResult(option);
+    showResult(option, pmt, i, nper);
   } else if (option == 2) {
     const npv = parseFloat(Data1.value);
     const i = parseFloat(Data2.value) / 100;
     const nper = parseInt(Data3.value);
 
     P_to_F(npv, i, nper);
-    showResult(option);
+    showResult(option, npv, i, nper);
   } else if (option == 3) {
     const fv = parseFloat(Data1.value);
     const i = parseFloat(Data2.value) / 100;
     const nper = parseInt(Data3.value);
 
     F_to_A(fv, i, nper);
-    showResult(option);
+    showResult(option, fv, i, nper);
   } else if (option == 4) {
     const fv = parseFloat(Data1.value);
     const i = parseFloat(Data2.value) / 100;
     const nper = parseInt(Data3.value);
 
     F_to_P(fv, i, nper);
-    showResult(option);
+    showResult(option, fv, i, nper);
   }
 }
 

@@ -213,6 +213,13 @@
   padding: 20px 70px;
   font-size: 35px;
 }
+.mainPopup .twoShow .A2 .subtitle {
+  margin-top: 30px;
+}
+.mainPopup .twoShow .A2 .initialValue {
+  padding: 10px 14px;
+  background: white;
+}
 
 @media screen and (max-height: 675px) {
   .mainPopup {
