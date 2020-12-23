@@ -216,8 +216,3 @@
     height: 675px;
   }
 }
-@media screen and (max-width: 600px) {
-  .mainPopup {
-    width: 600px;
-  }
-}
